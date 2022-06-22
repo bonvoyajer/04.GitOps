@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
 
       - name: Get changed files
         id: changed-files
@@ -22,7 +22,7 @@ jobs:
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "$file was changed" >> files.log 2>&1
-            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> files.log 2>&1"
+            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> files.log 2>&1 
           done
       - name: Upload report
         uses: actions/upload-artifact@v2
