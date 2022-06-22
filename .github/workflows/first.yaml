@@ -1,4 +1,4 @@
-name: AB
+name: check tabs
 
 on:
   push:
